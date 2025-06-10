@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-Tech App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 1rem;
+    }
+    .pantalla {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu button, form button {
+      margin: 0.5rem 0;
+      padding: 0.5rem 1rem;
+      background: #6cc1ff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .voz {
+      background: #ff88aa;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    label {
+      display: block;
+      margin: 0.5rem 0;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pantalla de bienvenida -->
+  <div class="pantalla">
+    <header>
+      <h1>K-Tech</h1>
+      <button class="voz">🎤</button>
+    </header>
+    <p>Bienvenido a K-Tech, tu app de apoyo y conexión con tu zapatilla inteligente.</p>
+    <button>Empezar</button>
+  </div>
+
+  <!-- Registro de usuario -->
+  <div class="pantalla">
+    <h2>Crear Usuario</h2>
+    <form>
+      <label>Nombre:<input type="text" /></label>
+      <label>Código de la caja:<input type="text" /></label>
+      <label>¿Zapatilla conectada?:
+        <select><option>Sí</option><option>No</option></select>
+      </label>
+      <label>Edad:<input type="number" /></label>
+      <label>Nivel de actividad física:
+        <select><option>Bajo</option><option>Medio</option><option>Alto</option></select>
+      </label>
+      <button>Crear cuenta</button>
+    </form>
+    <button class="voz">🎤</button>
+  </div>
+
+  <!-- Pantalla principal -->
+  <div class="pantalla">
+    <header>
+      <h2>Pantalla Principal</h2>
+      <button class="voz">🎤</button>
+    </header>
+    <nav>
+      <button>Actividades</button>
+      <button>Vibraciones</button>
+      <button>Recompensas</button>
+      <button>Perfil</button>
+      <button>Soporte</button>
+    </nav>
+  </div>
+
+  <!-- Pantalla de vibraciones -->
+  <div class="pantalla">
+    <h2>Ajustes de Vibración</h2>
+    <label>Intensidad:<input type="range" min="1" max="10" /></label>
+    <label>Frecuencia:<input type="range" min="1" max="10" /></label>
+    <label>Duración (segundos):<input type="number" /></label>
+    <button>Iniciar vibración</button>
+    <button class="voz">🎤</button>
+  </div>
+
+  <!-- Pantalla de actividades -->
+  <div class="pantalla">
+    <h2>Actividades Físicas</h2>
+    <ul>
+      <li>Caminar 15 min <button>Iniciar</button></li>
+      <li>Ejercicios guiados <button>Ver</button></li>
+    </ul>
+    <button class="voz">🎤</button>
+  </div>
+
+  <!-- Pantalla de recompensas -->
+  <div class="pantalla">
+    <h2>Recompensas</h2>
+    <p>Has ganado 3 medallas esta semana 🎖️</p>
+    <button class="voz">🎤</button>
+  </div>
+
+  <!-- Pantalla de perfil -->
+  <div class="pantalla">
+    <h2>Perfil</h2>
+    <p>Nombre: Juan Pérez</p>
+    <p>Edad: 70</p>
+    <p>Nivel: Medio</p>
+    <button>Editar Perfil</button>
+    <button class="voz">🎤</button>
+  </div>
+
+  <!-- Pantalla de soporte -->
+  <div class="pantalla">
+    <h2>Soporte Técnico</h2>
+    <p>¿Tienes problemas? Contáctanos o revisa las preguntas frecuentes.</p>
+    <button>Contactar Soporte</button>
+    <button class="voz">🎤</button>
+  </div>
+
+</body>
+</html>

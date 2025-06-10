@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="K-Tech - Aplicación de control de zapatilla inteligente con accesibilidad avanzada">
+    <title>K-Tech - Bienvenida</title>
+    
+    <!-- CSS Modular -->
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/accessibility.css">
+    <link rel="stylesheet" href="src/styles/welcome.css">
+</head>
+<body>
+    <!-- Contenedor principal de la aplicación -->
+    <main class="app-container" role="main">
+        <!-- Pantalla de Bienvenida -->
+        <section class="welcome-screen" aria-labelledby="welcome-title">
+            <!-- Header principal -->
+            <header class="welcome-header">
+                <h1 id="welcome-title" class="app-title">K-Tech</h1>
+            </header>
+
+            <!-- Contenido principal de bienvenida -->
+            <div class="welcome-content">
+                <!-- Imagen principal -->
+                <div class="welcome-image">
+                    <img src="assets/a.jpg" alt="K-Tech - Zapatilla inteligente para adultos mayores" class="main-image">
+                </div>
+
+                <!-- Mensaje de bienvenida -->
+                <div class="welcome-message">
+                    <h2 class="welcome-title-main">¡BIENVENIDO A K-TECH!</h2>
+                    <p class="welcome-description">
+                        Su compañero para mantenerse activo, saludable y conectado.
+                        Diseñado especialmente para adultos mayores que desean mantener su independencia y bienestar.
+                    </p>
+                </div>
+
+                <!-- Botones de acción principales -->
+                <div class="action-buttons">
+                    <button type="button" 
+                            class="primary-button" 
+                            id="start-button"
+                            aria-describedby="start-help">
+                        <span class="button-text">Iniciar</span>
+                    </button>
+                    
+                    <button type="button" 
+                            class="tts-button"
+                            id="tts-welcome"
+                            aria-label="Leer contenido en voz alta"
+                            title="Activar lectura en voz alta">
+                        <span class="tts-icon" aria-hidden="true">🔊</span>
+                    </button>
+                </div>
+
+                <!-- Zona de texto personalizable para TTS (oculta pero funcional) -->
+                <div class="custom-text-section hidden" id="custom-text-section">
+                    <label for="custom-text" class="custom-text-label">
+                        Escribe aquí cualquier texto que quieras escuchar:
+                    </label>
+                    <textarea id="custom-text" 
+                              class="custom-text-input"
+                              placeholder="Escribe tu texto aquí y presiona el botón de voz para escucharlo..."
+                              rows="3"
+                              aria-describedby="custom-text-help"></textarea>
+                    <p id="custom-text-help" class="help-text">
+                        Escribe cualquier texto y usa el botón de voz para escucharlo.
+                    </p>
+                    <button type="button" 
+                            class="tts-button tts-custom"
+                            id="tts-custom"
+                            aria-label="Leer texto personalizado en voz alta">
+                        <span class="tts-icon" aria-hidden="true">🎤</span>
+                        <span class="tts-text">Escuchar mi texto</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer con información adicional -->
+            <footer class="welcome-footer">
+                <p class="version-info">Versión 1.0.0 | Accesibilidad Avanzada</p>
+            </footer>
+        </section>
+    </main>
+
+    <!-- Scripts modulares -->
+    <script src="src/scripts/utils/constants.js"></script>
+    <script src="src/scripts/utils/accessibility.js"></script>
+    <script src="src/scripts/modules/tts.js"></script>
+    <script src="src/scripts/welcome.js"></script>
+</body>
+</html> 

@@ -1,0 +1,299 @@
+/* ===========================================
+   K-Tech App - Estilos de Accesibilidad Avanzada
+   Alto contraste, tamaños grandes, TTS
+   =========================================== */
+
+/* Variables específicas de accesibilidad */
+:root {
+    /* Tamaños mínimos de accesibilidad */
+    --min-touch-target: 44px; /* WCAG 2.1 AA */
+    --button-height-accessible: 56px;
+    --font-size-accessible: 18px;
+    
+    /* Colores de alto contraste */
+    --contrast-bg: #ffffff;
+    --contrast-text: #000000;
+    --contrast-focus: #005fcc;
+    --contrast-error: #d32f2f;
+    --contrast-success: #2e7d32;
+    
+    /* Espaciado para accesibilidad */
+    --accessible-padding: 1.5rem;
+    --accessible-margin: 1rem;
+}
+
+/* Focus styles mejorados para navegación por teclado */
+*:focus {
+    outline: 3px solid var(--contrast-focus);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--contrast-bg), 0 0 0 5px var(--contrast-focus);
+}
+
+/* Remover outline solo si hay hover (mouse users) */
+@media (hover: hover) {
+    *:hover:focus {
+        outline: 3px solid var(--contrast-focus);
+    }
+}
+
+/* Botones de accesibilidad - TTS */
+.tts-button {
+    min-width: var(--min-touch-target);
+    min-height: var(--min-touch-target);
+    padding: 8px 10px;
+    background: linear-gradient(135deg, var(--secondary-color), #388E3C);
+    color: var(--text-white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    position: relative;
+}
+
+.tts-button:hover {
+    background: linear-gradient(135deg, #388E3C, #2E7D32);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+.tts-button:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+}
+
+.tts-button:focus {
+    background: linear-gradient(135deg, #388E3C, #2E7D32);
+}
+
+/* Estados del botón TTS */
+.tts-button.speaking {
+    background: var(--success-color);
+    animation: pulse-speaking 1.5s infinite;
+}
+
+.tts-button.error {
+    background: var(--contrast-error);
+}
+
+@keyframes pulse-speaking {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+/* Iconos de TTS */
+.tts-icon {
+    font-size: 1.2em;
+    display: inline-block;
+}
+
+.tts-text {
+    font-weight: var(--font-weight-medium);
+}
+
+/* Controles de accesibilidad */
+.accessibility-controls {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+}
+
+/* Campos de texto accesibles */
+.custom-text-input {
+    min-height: var(--button-height-accessible);
+    padding: var(--spacing-md);
+    font-size: var(--font-size-accessible);
+    border: 2px solid var(--text-light);
+    border-radius: var(--border-radius-md);
+    background: var(--contrast-bg);
+    color: var(--text-primary);
+    resize: vertical;
+    transition: border-color var(--transition-normal);
+    width: 100%;
+    font-family: inherit;
+    line-height: var(--line-height-normal);
+}
+
+.custom-text-input:focus {
+    border-color: var(--contrast-focus);
+    background: var(--contrast-bg);
+}
+
+.custom-text-input::placeholder {
+    color: var(--text-secondary);
+    font-size: var(--font-size-base);
+}
+
+/* Labels accesibles */
+.custom-text-label {
+    display: block;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+/* Texto de ayuda */
+.help-text {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+    margin-top: var(--spacing-xs);
+    line-height: var(--line-height-relaxed);
+}
+
+/* Botones primarios accesibles */
+.primary-button {
+    min-width: 200px;
+    min-height: var(--button-height-accessible);
+    padding: 10px 15px;
+    background: linear-gradient(135deg, var(--primary-color), #1976D2);
+    color: var(--text-white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius-lg);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.primary-button:hover {
+    background: linear-gradient(135deg, #1976D2, #1565C0);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+}
+
+.primary-button:active {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.primary-button:focus {
+    background: linear-gradient(135deg, #1976D2, #1565C0);
+}
+
+.button-icon {
+    font-size: 1.3em;
+}
+
+.button-text {
+    font-weight: var(--font-weight-bold);
+}
+
+/* Indicadores visuales de estado */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: loading-shimmer 2s infinite;
+}
+
+@keyframes loading-shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Mensajes de estado para lectores de pantalla */
+.sr-message {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.sr-message.active {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: var(--spacing-sm);
+    background: var(--contrast-focus);
+    color: var(--text-white);
+    border-radius: var(--border-radius-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Modo alto contraste (activado por usuario) */
+@media (prefers-contrast: high) {
+    :root {
+        --bg-primary: #000000;
+        --bg-secondary: #000000;
+        --bg-card: #000000;
+        --text-primary: #ffffff;
+        --text-secondary: #cccccc;
+        --primary-color: #66bbff;
+        --secondary-color: #ff99bb;
+    }
+    
+    .tts-button,
+    .primary-button {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reducir movimiento para usuarios sensibles */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .tts-button.speaking {
+        animation: none;
+        background: var(--success-color);
+    }
+}
+
+/* Soporte para usuarios de solo teclado */
+.keyboard-user *:focus {
+    outline: 3px solid var(--contrast-focus);
+    outline-offset: 2px;
+}
+
+/* Aumentar tamaño de fuente */
+@media (min-width: 768px) {
+    :root {
+        --font-size-accessible: 20px;
+        --button-height-accessible: 64px;
+    }
+} 

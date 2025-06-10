@@ -1,0 +1,98 @@
+# K-Tech: Reglas de Desarrollo (.cursorrules)
+# Propósito: Guiar el desarrollo profesional, modular y escalonado de una aplicación web centrada en el control de una zapatilla inteligente con accesibilidad avanzada.
+
+────────────────────────────────────────────
+1. FUNDAMENTO GENERAL
+────────────────────────────────────────────
+- La aplicación **NO se desarrollará sobre el archivo entregado (`ktech_app_prototipo.html`)**, ya que no cumple con estándares de calidad ni buenas prácticas.
+- El archivo entregado servirá **sólo como guía teórica o referencia visual**.
+- Todo el desarrollo se realizará desde cero, de forma **segmentada y profesional**, siguiendo principios de **modularidad, separación de responsabilidades y escalabilidad**.
+- El proyecto se desarrollará **por etapas**, para asegurar claridad y calidad en cada módulo. Evitaremos avanzar sin pulir cada parte.
+- Cada módulo del proyecto deberá seguir buenas prácticas de programación: código limpio, semántico, comentado y reutilizable.
+
+────────────────────────────────────────────
+2. ORGANIZACIÓN DEL PROYECTO
+────────────────────────────────────────────
+- Estructura de carpetas base:
+  /src
+    /assets (imágenes, sonidos)
+    /components (componentes reutilizables)
+    /modules (funcionalidades independientes)
+    /styles (CSS modular y organizado)
+    /scripts (JS modular por función)
+  index.html
+  register.html
+  .cursorrules
+  README.md
+
+- No se permite CSS inline ni JavaScript embebido.
+
+────────────────────────────────────────────
+3. ACCESIBILIDAD AVANZADA
+────────────────────────────────────────────
+- Todas las pantallas deben tener:
+  - Botón de lectura en voz alta (Text-to-Speech).
+  - Campo para que el usuario escriba texto y lo escuche.
+- Fuentes grandes (mínimo 16px), alto contraste, botones grandes.
+- Navegación simplificada: máximo 2–3 acciones visibles por pantalla.
+
+────────────────────────────────────────────
+4. FUNCIONALIDADES OBSERVADAS EN EL DISEÑO
+────────────────────────────────────────────
+🟦 Pantalla: Registro de cuenta
+- Campos con *placeholder* claro.
+- Inputs bien espaciados.
+- Selectores de fecha estilo dropdown.
+- Botones para seleccionar preferencias (tipo toggle visual).
+- Slider para nivel de actividad física.
+- Switch tipo iOS para Bluetooth.
+- Checkbox visual para términos y notificaciones.
+- Botón de acción claramente distinguible.
+- Enlace inferior para redirigir a "Iniciar sesión".
+
+🟦 Pantalla: Control de vibraciones
+- Encabezado con nombre de la app y avatar del usuario.
+- Estado de vibración (activo/inactivo) con switch.
+- Indicador visual de intensidad (slider) y frecuencia.
+- Zona visual con icono concéntrico.
+- Sección de recordatorios con toggles independientes.
+- Botón para “Guardar cambios” + otro para ir a “Actividades”.
+- Barra de navegación inferior con íconos (Inicio, Actividades, Zapatilla, Perfil).
+
+🟦 Estilo visual general
+- Colores: fondo blanco, botones en rojo/salmón, secciones azules.
+- Formas redondeadas, modernas.
+- Uso consistente de iconografía.
+- Margen lateral amplio y padding generoso.
+- UI adaptable a móviles.
+
+────────────────────────────────────────────
+5. BUENAS PRÁCTICAS EXIGIDAS
+────────────────────────────────────────────
+- HTML5 semántico validado.
+- CSS modular y reutilizable. No usar IDs para estilizar.
+- JS separado por responsabilidad (eventos, lógica, utilidades).
+- Código comentado y documentado.
+- Diseño Mobile First y luego adaptable a pantallas mayores.
+- Versionamiento obligatorio con Git.
+
+────────────────────────────────────────────
+6. TECNOLOGÍA SUGERIDA
+────────────────────────────────────────────
+- HTML5, CSS3, JavaScript (Vanilla).
+- API Web Speech (TTS) para accesibilidad auditiva.
+- LocalStorage para persistencia mínima sin backend.
+- Navegación SPA simple o multipágina limpia (según necesidad).
+
+────────────────────────────────────────────
+7. PROHIBICIONES ABSOLUTAS
+────────────────────────────────────────────
+- No usar el HTML de prototipo como base directa.
+- No abusar de librerías externas innecesarias.
+- No hacer scroll infinito ni pantallas extensas.
+- No permitir acciones sin retroalimentación visual y/o auditiva.
+- No entregar módulos sin validación visual ni de accesibilidad.
+
+# Esta aplicación será construida con rigurosidad profesional, accesibilidad avanzada y estructura modular. El diseño guía será interpretado con precisión, pero nunca a costa de romper buenas prácticas.
+
+# FIN DE REGLAS
