@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios - K-Tech Smart Shoes</title>
+    
+    <!-- Estilos base -->
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/accessibility.css">
+    <link rel="stylesheet" href="src/styles/ejercicios.css">
+    
+    <!-- SEO y accesibilidad -->
+    <meta name="description" content="Ejercicios K-Tech - Rutinas diseñadas específicamente para adultos mayores con zapatillas inteligentes">
+    <meta name="keywords" content="ejercicios, adultos mayores, k-tech, zapatillas inteligentes, actividad física">
+</head>
+<body>
+    <!-- Skip navigation para accesibilidad -->
+    <a href="#main-content" class="skip-nav">Saltar al contenido principal</a>
+    
+    <!-- Header con título principal -->
+    <header class="header">
+        <h1 class="header__title">K-Tech</h1>
+        <button id="header-tts-btn" class="tts-button" aria-label="Leer contenido de la página en voz alta">
+            🔊
+        </button>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main id="main-content" class="main-content">
+        <div class="ejercicios-container">
+            <!-- Título de la sección -->
+            <section class="ejercicios-header">
+                <h2 class="ejercicios-title">EJERCICIOS DIARIOS</h2>
+                <p class="ejercicios-subtitle">Rutinas seguras y efectivas diseñadas para adultos mayores</p>
+            </section>
+            
+            <!-- Ejercicios disponibles -->
+            <section class="ejercicios-grid">
+                <div class="ejercicio-card">
+                    <div class="ejercicio-icon">🚶</div>
+                    <h3>Caminata Suave</h3>
+                    <p><strong>Duración:</strong> 15-30 minutos</p>
+                    <p>Caminata a ritmo cómodo. Perfecto para comenzar el día con energía.</p>
+                    <div class="ejercicio-benefits">
+                        <span class="benefit">❤️ Cardiovascular</span>
+                        <span class="benefit">🦴 Fortalece huesos</span>
+                    </div>
+                    <button class="ejercicio-btn" data-ejercicio="caminata">Comenzar</button>
+                </div>
+                
+                <div class="ejercicio-card">
+                    <div class="ejercicio-icon">🧘</div>
+                    <h3>Equilibrio y Estabilidad</h3>
+                    <p><strong>Duración:</strong> 10-15 minutos</p>
+                    <p>Ejercicios de balance para mejorar estabilidad y prevenir caídas.</p>
+                    <div class="ejercicio-benefits">
+                        <span class="benefit">⚖️ Equilibrio</span>
+                        <span class="benefit">🛡️ Prevención</span>
+                    </div>
+                    <button class="ejercicio-btn" data-ejercicio="equilibrio">Comenzar</button>
+                </div>
+                
+                <div class="ejercicio-card">
+                    <div class="ejercicio-icon">💪</div>
+                    <h3>Fortalecimiento Suave</h3>
+                    <p><strong>Duración:</strong> 20 minutos</p>
+                    <p>Ejercicios de resistencia suave para mantener fuerza muscular.</p>
+                    <div class="ejercicio-benefits">
+                        <span class="benefit">💪 Fuerza</span>
+                        <span class="benefit">🔄 Flexibilidad</span>
+                    </div>
+                    <button class="ejercicio-btn" data-ejercicio="fuerza">Comenzar</button>
+                </div>
+                
+                <div class="ejercicio-card">
+                    <div class="ejercicio-icon">🎯</div>
+                    <h3>Coordinación</h3>
+                    <p><strong>Duración:</strong> 15 minutos</p>
+                    <p>Movimientos coordinados para mantener agilidad mental y física.</p>
+                    <div class="ejercicio-benefits">
+                        <span class="benefit">🧠 Mental</span>
+                        <span class="benefit">🎯 Coordinación</span>
+                    </div>
+                    <button class="ejercicio-btn" data-ejercicio="coordinacion">Comenzar</button>
+                </div>
+                
+                <div class="ejercicio-card">
+                    <div class="ejercicio-icon">🌅</div>
+                    <h3>Rutina Matutina</h3>
+                    <p><strong>Duración:</strong> 25 minutos</p>
+                    <p>Secuencia completa de ejercicios para empezar el día activo.</p>
+                    <div class="ejercicio-benefits">
+                        <span class="benefit">☀️ Energía</span>
+                        <span class="benefit">📅 Rutina</span>
+                    </div>
+                    <button class="ejercicio-btn" data-ejercicio="matutina">Comenzar</button>
+                </div>
+                
+                <div class="ejercicio-card">
+                    <div class="ejercicio-icon">🌙</div>
+                    <h3>Relajación Nocturna</h3>
+                    <p><strong>Duración:</strong> 15 minutos</p>
+                    <p>Estiramientos suaves y relajación para terminar el día.</p>
+                    <div class="ejercicio-benefits">
+                        <span class="benefit">😌 Relajación</span>
+                        <span class="benefit">💤 Descanso</span>
+                    </div>
+                    <button class="ejercicio-btn" data-ejercicio="nocturna">Comenzar</button>
+                </div>
+            </section>
+            
+            <!-- Estadísticas de ejercicio -->
+            <section class="stats-section">
+                <h3>Tu Progreso Semanal</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Ejercicios<br>Completados</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">180</div>
+                        <div class="stat-label">Minutos<br>Activos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">Días<br>Consecutivos</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Navegación principal -->
+            <nav class="main-navigation">
+                <button id="inicio-btn" class="nav-button">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Inicio</span>
+                </button>
+                
+                <button id="tutorial-btn" class="nav-button">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Tutorial</span>
+                </button>
+                
+                <button id="logros-btn" class="nav-button">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Logros</span>
+                </button>
+                
+                <button id="perfil-btn" class="nav-button">
+                    <span class="nav-icon">👴</span>
+                    <span class="nav-text">Perfil</span>
+                </button>
+            </nav>
+        </div>
+    </main>
+    
+    <!-- Área de texto personalizado para TTS -->
+    <aside class="custom-tts-area" aria-label="Área de texto personalizado">
+        <label for="custom-text-input" class="custom-tts-label">Escriba aquí para escuchar:</label>
+        <textarea 
+            id="custom-text-input" 
+            class="custom-text-input"
+            placeholder="Escriba el texto que desea escuchar..."
+            rows="3">
+        </textarea>
+        <button id="custom-tts-btn" class="tts-button custom-tts-button" aria-label="Reproducir texto personalizado">
+            ▶️ Reproducir
+        </button>
+    </aside>
+    
+    <!-- Scripts -->
+    <script src="src/scripts/utils/constants.js"></script>
+    <script src="src/scripts/utils/accessibility.js"></script>
+    <script src="src/scripts/modules/tts.js"></script>
+    <script src="src/scripts/ejercicios.js"></script>
+</body>
+</html> 

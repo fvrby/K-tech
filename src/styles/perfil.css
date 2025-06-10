@@ -1,0 +1,600 @@
+/* Perfil Page Styles */
+
+/* Header común */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: var(--gradient-primary);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor principal */
+.perfil-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Header del perfil */
+.perfil-header {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.perfil-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Información personal */
+.personal-info {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.profile-photo {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-placeholder {
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-secondary);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+}
+
+.change-photo-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    border: 2px solid white;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.change-photo-btn:hover {
+    background: var(--gradient-secondary);
+    transform: scale(1.1);
+}
+
+.profile-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    min-width: 120px;
+    font-size: 0.9rem;
+}
+
+.detail-value {
+    color: var(--text-dark);
+    font-size: 1rem;
+    flex: 1;
+}
+
+/* Sección de configuraciones */
+.settings-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.settings-section h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.settings-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.setting-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.setting-info {
+    flex: 1;
+}
+
+.setting-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 3px;
+}
+
+.setting-description {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.3);
+    transition: 0.4s;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider {
+    background: var(--gradient-secondary);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Botón de configuración */
+.setting-button {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.setting-button:hover {
+    background: var(--gradient-secondary);
+    transform: translateY(-1px);
+}
+
+/* Estado de conexión */
+.connection-status {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.connection-status.connected {
+    background: rgba(76, 175, 80, 0.2);
+    color: var(--secondary-color);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+/* Información del dispositivo */
+.device-info {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.device-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.device-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.device-icon {
+    font-size: 3rem;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.device-details {
+    flex: 1;
+}
+
+.device-details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 8px 0;
+}
+
+.device-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.device-stat {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+}
+
+.sync-button {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sync-button:hover {
+    background: var(--gradient-secondary);
+    transform: translateY(-1px);
+}
+
+/* Contactos de emergencia */
+.emergency-contact {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.emergency-contact h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-card:last-child {
+    margin-bottom: 0;
+}
+
+.contact-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 3px 0;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    margin: 0 0 2px 0;
+}
+
+.contact-phone {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.call-button {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.call-button:hover {
+    background: linear-gradient(135deg, #45a049, #4CAF50);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Navegación principal */
+.main-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    min-height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.nav-text {
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .personal-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .device-card,
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .device-icon,
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+    
+    .device-stats {
+        align-items: center;
+    }
+    
+    .header__title {
+        font-size: 1.5rem;
+    }
+    
+    .perfil-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-navigation {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .nav-button {
+        flex-direction: row;
+        justify-content: center;
+        min-height: 60px;
+        gap: 8px;
+    }
+    
+    .setting-item {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .detail-label {
+        min-width: auto;
+    }
+}
+
+/* Estados de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .setting-item,
+    .contact-card,
+    .nav-button,
+    .change-photo-btn,
+    .slider:before {
+        transition: none;
+    }
+    
+    .contact-card:hover,
+    .nav-button:hover,
+    .change-photo-btn:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .setting-item,
+    .contact-card,
+    .device-card,
+    .nav-button {
+        border-color: var(--text-dark);
+        border-width: 2px;
+    }
+    
+    .slider {
+        border-width: 2px;
+    }
+} 

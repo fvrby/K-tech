@@ -189,14 +189,10 @@ class WelcomeScreen {
                 ACCESSIBILITY_MESSAGES.buttons.start
             );
             
-            // Aquí se implementará la navegación a la siguiente pantalla
             console.log('Iniciando aplicación K-Tech...');
             
-            // Temporal: mostrar mensaje de confirmación
-            this.showTemporaryMessage(
-                'Funcionalidad de navegación se implementará en el siguiente módulo',
-                'info'
-            );
+            // Navegar al tutorial
+            window.location.href = 'tutorial.html';
             
         } catch (error) {
             console.error('Error en botón de inicio:', error);
@@ -424,6 +420,15 @@ class WelcomeScreen {
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     window.welcomeScreen = new WelcomeScreen();
+
+    // Funcionalidad del botón Iniciar
+    const iniciarBtn = document.getElementById('iniciar-btn');
+    if (iniciarBtn) {
+        iniciarBtn.addEventListener('click', () => {
+            // Redirigir a la página de tutorial
+            window.location.href = 'tutorial.html';
+        });
+    }
 });
 
 // Añadir estilos CSS adicionales para animaciones

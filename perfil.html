@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - K-Tech Smart Shoes</title>
+    
+    <!-- Estilos base -->
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/accessibility.css">
+    <link rel="stylesheet" href="src/styles/perfil.css">
+    
+    <!-- SEO y accesibilidad -->
+    <meta name="description" content="Perfil K-Tech - Información personal y configuraciones de usuario">
+    <meta name="keywords" content="perfil, usuario, k-tech, configuraciones, información personal">
+</head>
+<body>
+    <!-- Skip navigation para accesibilidad -->
+    <a href="#main-content" class="skip-nav">Saltar al contenido principal</a>
+    
+    <!-- Header con título principal -->
+    <header class="header">
+        <h1 class="header__title">K-Tech</h1>
+        <button id="header-tts-btn" class="tts-button" aria-label="Leer contenido de la página en voz alta">
+            🔊
+        </button>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main id="main-content" class="main-content">
+        <div class="perfil-container">
+            <!-- Título de la sección -->
+            <section class="perfil-header">
+                <h2 class="perfil-title">MI PERFIL</h2>
+                <p class="perfil-subtitle">Gestiona tu información personal y configuraciones</p>
+            </section>
+            
+            <!-- Información personal -->
+            <section class="personal-info">
+                <div class="profile-photo">
+                    <img src="src/assets/user-avatar.jpg" alt="Foto de perfil de Don Alberto" class="profile-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="profile-placeholder">👴</div>
+                    <button class="change-photo-btn" aria-label="Cambiar foto de perfil">📷</button>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <label class="detail-label">Nombre:</label>
+                        <span class="detail-value">Don Alberto Rodríguez</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <label class="detail-label">Edad:</label>
+                        <span class="detail-value">72 años</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <label class="detail-label">Nivel de actividad:</label>
+                        <span class="detail-value">🌟 Caminante Activo</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <label class="detail-label">Fecha de registro:</label>
+                        <span class="detail-value">15 de Noviembre, 2024</span>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <label class="detail-label">Días activo:</label>
+                        <span class="detail-value">32 días consecutivos</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Configuraciones -->
+            <section class="settings-section">
+                <h3>Configuraciones</h3>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">🔊 Recordatorios de voz</label>
+                            <p class="setting-description">Activar notificaciones habladas</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">📱 Notificaciones push</label>
+                            <p class="setting-description">Recibir alertas en el dispositivo</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">🎯 Objetivos diarios</label>
+                            <p class="setting-description">Meta de pasos: 5,000 por día</p>
+                        </div>
+                        <button class="setting-button">Ajustar</button>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">🌙 Modo nocturno</label>
+                            <p class="setting-description">Reducir actividad después de las 8 PM</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">🔗 Conexión Bluetooth</label>
+                            <p class="setting-description">Estado: Conectado</p>
+                        </div>
+                        <div class="connection-status connected">✓ Conectado</div>
+                    </div>
+                    
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <label class="setting-label">📊 Compartir progreso</label>
+                            <p class="setting-description">Permitir que familia vea logros</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Información de la zapatilla -->
+            <section class="device-info">
+                <h3>Mi Zapatilla K-Tech</h3>
+                <div class="device-card">
+                    <div class="device-icon">👟</div>
+                    <div class="device-details">
+                        <h4>K-Tech Smart Walker Pro</h4>
+                        <div class="device-stats">
+                            <span class="device-stat">🔋 Batería: 87%</span>
+                            <span class="device-stat">📡 Señal: Excelente</span>
+                            <span class="device-stat">🔄 Última sincronización: Hace 2 min</span>
+                        </div>
+                    </div>
+                    <button class="sync-button">Sincronizar</button>
+                </div>
+            </section>
+            
+            <!-- Contacto de emergencia -->
+            <section class="emergency-contact">
+                <h3>Contacto de Emergencia</h3>
+                <div class="contact-card">
+                    <div class="contact-icon">👨‍⚕️</div>
+                    <div class="contact-info">
+                        <h4>Dr. María González</h4>
+                        <p>Médico de cabecera</p>
+                        <p class="contact-phone">📞 (555) 123-4567</p>
+                    </div>
+                    <button class="call-button">Llamar</button>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">👨</div>
+                    <div class="contact-info">
+                        <h4>Carlos Rodríguez</h4>
+                        <p>Hijo - Contacto familiar</p>
+                        <p class="contact-phone">📞 (555) 987-6543</p>
+                    </div>
+                    <button class="call-button">Llamar</button>
+                </div>
+            </section>
+            
+            <!-- Navegación principal -->
+            <nav class="main-navigation">
+                <button id="inicio-btn" class="nav-button">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Inicio</span>
+                </button>
+                
+                <button id="tutorial-btn" class="nav-button">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Tutorial</span>
+                </button>
+                
+                <button id="ejercicios-btn" class="nav-button">
+                    <span class="nav-icon">💪</span>
+                    <span class="nav-text">Ejercicios</span>
+                </button>
+                
+                <button id="logros-btn" class="nav-button">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Logros</span>
+                </button>
+            </nav>
+        </div>
+    </main>
+    
+    <!-- Área de texto personalizado para TTS -->
+    <aside class="custom-tts-area" aria-label="Área de texto personalizado">
+        <label for="custom-text-input" class="custom-tts-label">Escriba aquí para escuchar:</label>
+        <textarea 
+            id="custom-text-input" 
+            class="custom-text-input"
+            placeholder="Escriba el texto que desea escuchar..."
+            rows="3">
+        </textarea>
+        <button id="custom-tts-btn" class="tts-button custom-tts-button" aria-label="Reproducir texto personalizado">
+            ▶️ Reproducir
+        </button>
+    </aside>
+    
+    <!-- Scripts -->
+    <script src="src/scripts/utils/constants.js"></script>
+    <script src="src/scripts/utils/accessibility.js"></script>
+    <script src="src/scripts/modules/tts.js"></script>
+    <script src="src/scripts/perfil.js"></script>
+</body>
+</html> 

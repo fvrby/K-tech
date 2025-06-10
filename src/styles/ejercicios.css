@@ -1,0 +1,324 @@
+/* Ejercicios Page Styles */
+
+/* Header común (reutilizado de tutorial.css) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: var(--gradient-primary);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor principal */
+.ejercicios-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Header de ejercicios */
+.ejercicios-header {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.ejercicios-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ejercicios-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Grid de ejercicios */
+.ejercicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+}
+
+/* Cards de ejercicio */
+.ejercicio-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ejercicio-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ejercicio-icon {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.ejercicio-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.ejercicio-card p {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Benefits tags */
+.ejercicio-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.benefit {
+    background: rgba(76, 175, 80, 0.2);
+    color: var(--secondary-color);
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+/* Botón de ejercicio */
+.ejercicio-btn {
+    background: var(--gradient-primary);
+    color: var(--text-light);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.ejercicio-btn:hover,
+.ejercicio-btn:focus {
+    background: var(--gradient-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Sección de estadísticas */
+.stats-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.stats-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 0 0 10px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Navegación principal */
+.main-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.nav-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    min-height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.nav-text {
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ejercicios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ejercicio-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2.5rem;
+    }
+    
+    .ejercicio-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .header__title {
+        font-size: 1.5rem;
+    }
+    
+    .ejercicios-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-navigation {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .nav-button {
+        flex-direction: row;
+        justify-content: center;
+        min-height: 60px;
+        gap: 8px;
+    }
+    
+    .ejercicio-benefits {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Estados de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .ejercicio-card,
+    .ejercicio-btn,
+    .nav-button {
+        transition: none;
+    }
+    
+    .ejercicio-card:hover,
+    .ejercicio-btn:hover,
+    .nav-button:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .ejercicio-card,
+    .stat-item,
+    .nav-button {
+        border-color: var(--text-dark);
+        border-width: 2px;
+    }
+    
+    .ejercicio-icon {
+        border: 2px solid var(--text-dark);
+    }
+} 

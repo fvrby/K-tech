@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logros - K-Tech Smart Shoes</title>
+    
+    <!-- Estilos base -->
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/styles/accessibility.css">
+    <link rel="stylesheet" href="src/styles/logros.css">
+    
+    <!-- SEO y accesibilidad -->
+    <meta name="description" content="Logros K-Tech - Seguimiento de avances y recompensas por actividad física">
+    <meta name="keywords" content="logros, progreso, k-tech, zapatillas inteligentes, recompensas">
+</head>
+<body>
+    <!-- Skip navigation para accesibilidad -->
+    <a href="#main-content" class="skip-nav">Saltar al contenido principal</a>
+    
+    <!-- Header con título principal -->
+    <header class="header">
+        <h1 class="header__title">K-Tech</h1>
+        <button id="header-tts-btn" class="tts-button" aria-label="Leer contenido de la página en voz alta">
+            🔊
+        </button>
+    </header>
+    
+    <!-- Contenido principal -->
+    <main id="main-content" class="main-content">
+        <div class="logros-container">
+            <!-- Perfil del usuario -->
+            <section class="user-profile">
+                <div class="profile-avatar">
+                    <img src="src/assets/user-avatar.jpg" alt="Foto de perfil del usuario" class="avatar-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="avatar-placeholder">👴</div>
+                </div>
+                <div class="profile-info">
+                    <h2 class="user-name">Don Alberto</h2>
+                    <p class="user-level">Nivel 🌟 Caminante Activo</p>
+                    <div class="user-stats">
+                        <span class="stat">📅 32 días activo</span>
+                        <span class="stat">🎯 85% objetivos cumplidos</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Título de la sección -->
+            <section class="logros-header">
+                <h2 class="logros-title">MIS LOGROS</h2>
+                <p class="logros-subtitle">¡Celebra cada paso hacia una vida más saludable!</p>
+            </section>
+            
+            <!-- Progreso semanal -->
+            <section class="progress-section">
+                <h3>Progreso de esta semana</h3>
+                <div class="progress-bars">
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span class="progress-label">🚶 Pasos diarios</span>
+                            <span class="progress-value">4,250 / 5,000</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span class="progress-label">⏰ Tiempo activo</span>
+                            <span class="progress-value">28 / 30 min</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 93%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-info">
+                            <span class="progress-label">🏋️ Ejercicios</span>
+                            <span class="progress-value">6 / 7 días</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 86%"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Logros obtenidos -->
+            <section class="achievements-section">
+                <h3>Logros Desbloqueados</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">🥉</div>
+                        <h4>Primer Paso</h4>
+                        <p>Completaste tu primer ejercicio</p>
+                        <span class="achievement-date">Hace 30 días</span>
+                    </div>
+                    
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">🔥</div>
+                        <h4>Racha de 7 días</h4>
+                        <p>7 días consecutivos de actividad</p>
+                        <span class="achievement-date">Hace 15 días</span>
+                    </div>
+                    
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">⭐</div>
+                        <h4>Caminante Constante</h4>
+                        <p>5,000 pasos en un día</p>
+                        <span class="achievement-date">Hace 3 días</span>
+                    </div>
+                    
+                    <div class="achievement-card unlocked">
+                        <div class="achievement-icon">💪</div>
+                        <h4>Fuerza Interior</h4>
+                        <p>10 ejercicios de fortalecimiento</p>
+                        <span class="achievement-date">Ayer</span>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">🏆</div>
+                        <h4>Campeón Mensual</h4>
+                        <p>30 días consecutivos de actividad</p>
+                        <span class="achievement-progress">2 días restantes</span>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">🎯</div>
+                        <h4>Objetivo Perfecto</h4>
+                        <p>100% de objetivos en una semana</p>
+                        <span class="achievement-progress">1 día restante</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Estadísticas generales -->
+            <section class="stats-overview">
+                <h3>Resumen General</h3>
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-content">
+                            <div class="stat-number">127,340</div>
+                            <div class="stat-label">Pasos Totales</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🕐</div>
+                        <div class="stat-content">
+                            <div class="stat-number">24.5</div>
+                            <div class="stat-label">Horas Activas</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🔥</div>
+                        <div class="stat-content">
+                            <div class="stat-number">1,890</div>
+                            <div class="stat-label">Calorías Quemadas</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🏅</div>
+                        <div class="stat-content">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Logros Obtenidos</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Navegación principal -->
+            <nav class="main-navigation">
+                <button id="inicio-btn" class="nav-button">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Inicio</span>
+                </button>
+                
+                <button id="tutorial-btn" class="nav-button">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Tutorial</span>
+                </button>
+                
+                <button id="ejercicios-btn" class="nav-button">
+                    <span class="nav-icon">💪</span>
+                    <span class="nav-text">Ejercicios</span>
+                </button>
+                
+                <button id="perfil-btn" class="nav-button">
+                    <span class="nav-icon">👴</span>
+                    <span class="nav-text">Perfil</span>
+                </button>
+            </nav>
+        </div>
+    </main>
+    
+    <!-- Área de texto personalizado para TTS -->
+    <aside class="custom-tts-area" aria-label="Área de texto personalizado">
+        <label for="custom-text-input" class="custom-tts-label">Escriba aquí para escuchar:</label>
+        <textarea 
+            id="custom-text-input" 
+            class="custom-text-input"
+            placeholder="Escriba el texto que desea escuchar..."
+            rows="3">
+        </textarea>
+        <button id="custom-tts-btn" class="tts-button custom-tts-button" aria-label="Reproducir texto personalizado">
+            ▶️ Reproducir
+        </button>
+    </aside>
+    
+    <!-- Scripts -->
+    <script src="src/scripts/utils/constants.js"></script>
+    <script src="src/scripts/utils/accessibility.js"></script>
+    <script src="src/scripts/modules/tts.js"></script>
+    <script src="src/scripts/logros.js"></script>
+</body>
+</html> 
